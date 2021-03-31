@@ -14,3 +14,4 @@ python_version = "3.8"
 
 [scripts]
 start_prod = "bash -c 'cd shop && gunicorn shop.wsgi'"
+install_caddy = "bash scripts/install-caddy.bash"

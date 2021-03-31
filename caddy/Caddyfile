@@ -1,0 +1,9 @@
+:80
+
+route {
+  file_server /static/* {
+    root /app
+  }
+
+  reverse_proxy shop:8000
+}

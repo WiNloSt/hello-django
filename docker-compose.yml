@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  shop:
+    build: .
+    volumes:
+      - ".:/app/"
+      - "static_file:/app/shop/static/"
+    ports:
+      - "8000:8000"
+
+  caddy:
+    image: caddy:2
+    volumes:
+      - "./caddy:/etc/caddy"
+      - "caddy_data:/data"
+      - "static_file:/app/static/"
+    ports:
+      - "80:80"
+    depends_on:
+      - shop
+
+volumes:
+  caddy_data:
+  static_file:

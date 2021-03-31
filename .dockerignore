@@ -1,0 +1,13 @@
+# caddy
+caddy
+
+# installation script
+scripts
+
+# docker
+docker-compose.yml
+Dockerfile
+
+# pipenv
+Pipfile
+Pipfile.lock
